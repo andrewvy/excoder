@@ -1,6 +1,6 @@
 TODO:
 
-### Make encoding back-end agnostica (#1)
+### Make encoding back-end agnostic (#1)
 
 [ ] Make behaviour for transcoding back-end adapters.
 
