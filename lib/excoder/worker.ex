@@ -1,5 +1,5 @@
 defmodule Excoder.Worker do
-	use GenServer
+  use GenServer
   require Logger
 
   def start_link(_options) do
