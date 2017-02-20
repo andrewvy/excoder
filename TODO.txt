@@ -1,0 +1,43 @@
+TODO:
+
+### Make encoding back-end agnostica (#1)
+
+[ ] Make behaviour for transcoding back-end adapters.
+
+### Video Transcoding adapters:
+
+[ ] Zencoder
+[ ] Amazon Elastic Transcoder
+[ ] ffmpeg (local)
+
+### HTTP JSON API (#3)
+
+[ ] Add Plug
+[ ] GET /jobs endpoint
+[ ] POST /jobs endpoint
+[ ] GET /jobs/:uuid endpoint
+[ ] DELETE /jobs/:uuid endpoint
+
+---
+
+- Make agnostic video transcoding settings that can be passed into the transcoding adapters.
+- Job architecture
+  - Creating a job
+  - Sending jobs into our worker pool (which then gets shipped to our transcoding adapters)
+  - Getting job status
+  - Cancelling jobs
+
+Input -> Job -> [Outputs]
+          |
+          |
+      Job Status
+
+- Two types of sources: file-system / URL-based (should be handled by the adapter)
+- Transcoding presets?
+
+---
+
+Questions:
+
+Do we want the ability to have multiple adapters? (probably no)
+Do we want the ability to set transcoding presets? (yes)
